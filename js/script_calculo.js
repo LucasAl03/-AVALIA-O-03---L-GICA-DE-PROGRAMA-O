@@ -10,7 +10,7 @@ const valorAdd = (objLote) =>{
     }else if((objLote.valor > 500000) && (objLote.valor <= 1000000)){
         resposta = `Valor adiconal de 15% em torno de R$ ${(parseFloat(objLote.valor) * 0.15).toFixed(2).replace('.',',')} reais`
     }else{
-        resposta = `Valor dicional de 20%, em torno de R$ ${(parseFloat(objLote.valor) * 0.2).toFixed(2).replace('.',',')} reais`
+        resposta = `Valor adicional de 20%, em torno de R$ ${(parseFloat(objLote.valor) * 0.2).toFixed(2).replace('.',',')} reais`
     }
 
     return resposta
