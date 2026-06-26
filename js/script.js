@@ -36,6 +36,6 @@ const listLote = () => {
     loteLista.innerHTML = ''
 
     lotes.forEach((elem, i)=>{
-        loteLista.innerHTML += `<p> Descrição: Quadra ${elem.quadra} - Lote ${elem.lot}<p> Comprimento (m): ${elem.comprimento} m<p> Largura (m): ${elem.largura} m<p> Área (m²): ${elem.area} m²<p> Valor do Lote: R$ ${parseFloat(elem.valor).toFixed(2).replace('.',',')} reais<p> ${valorAdd(elem)}`
+        loteLista.innerHTML += ` Descrição: Quadra ${elem.quadra} - Lote ${elem.lot}<p> Comprimento (m): ${elem.comprimento} m, Largura (m): ${elem.largura} m, Área (m²): ${elem.area} m², Valor do Lote: R$ ${parseFloat(elem.valor).toFixed(2).replace('.',',')} reais, ${valorAdd(elem)} <p>`
     })
 }
