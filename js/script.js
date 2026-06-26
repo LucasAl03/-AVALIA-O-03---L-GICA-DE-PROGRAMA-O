@@ -1,3 +1,5 @@
+import { valorAdd } from './script_calculo.js'
+
 const lotes = []
 
 const formLote = document.querySelector('#form-lote')
@@ -34,6 +36,6 @@ const listLote = () => {
     loteLista.innerHTML = ''
 
     lotes.forEach((elem, i)=>{
-        loteLista.innerHTML += `Descrição: Quadra ${elem.quadra} - Lote ${elem.lot}<p> Comprimento (m): ${elem.comprimento} m<p> Largura (m): ${elem.largura} m<p> Área (m²): ${elem.area} m²<p> Valor do Lote: R$ ${parseFloat(elem.valor).toFixed(2).replace('.',',')} reais<p> Valor adicional:`
+        loteLista.innerHTML += `Descrição: Quadra ${elem.quadra} - Lote ${elem.lot}<p> Comprimento (m): ${elem.comprimento} m<p> Largura (m): ${elem.largura} m<p> Área (m²): ${elem.area} m²<p> Valor do Lote: R$ ${parseFloat(elem.valor).toFixed(2).replace('.',',')} reais<p> Valor adicional: ${valorAdd(elem)}`
     })
 }
